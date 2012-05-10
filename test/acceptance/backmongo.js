@@ -54,12 +54,12 @@ describe("BackMongo", function(){
         it("has this models", function(){
             expected = [
                 {
-                    "_id": "4f6b75e052ad624ff62cfc8b",
+                    "_id": "1",
                     "name": "manolo",
                     "age": 36
                 },
                 {
-                    "_id": "4f6b75e952ad624ff62cfc8c",
+                    "_id": "2",
                     "name": "silvio",
                     "age": 31
                 }
@@ -77,7 +77,7 @@ describe("BackMongo", function(){
         var model;
 
         before(function(done){
-            model = new BMModel({_id: '4f6b75e952ad624ff62cfc8c'});
+            model = new BMModel({_id: '2'});
             model.fetch({success: function(){done();}});
         });
 
@@ -107,7 +107,8 @@ describe("BackMongo", function(){
             var model = bmcollection.find(function(model){
                 return model.get('name') == 'paco';
             });
-            should.exist(model);     
+            should.exist(model);
+            model.id.substr(0, 4).should.equal('oid_');     
         });
     });
 
@@ -117,7 +118,7 @@ describe("BackMongo", function(){
         });
 
         before(function(){
-            var model = bmcollection.get('4f6b75e952ad624ff62cfc8c');
+            var model = bmcollection.get('2');
             model.destroy({success: function(){done();}});
         });
 
@@ -131,7 +132,7 @@ describe("BackMongo", function(){
 
         it("deletes the right one", function(){
             var model = bmcollection.find(function(model){
-                return model.get('_id') == '4f6b75e952ad624ff62cfc8c';
+                return model.get('_id') == '2';
             });
             should.not.exist(model);     
         });
@@ -143,7 +144,7 @@ describe("BackMongo", function(){
         });
 
         before(function(){
-            var model = bmcollection.get('4f6b75e052ad624ff62cfc8b');
+            var model = bmcollection.get('1');
             model.set('name', 'pepito');
             model.save({success: function(){done();}});
         });
@@ -154,7 +155,7 @@ describe("BackMongo", function(){
 
         it("update the right one", function(){
             var model = bmcollection.find(function(model){
-                return model.id == '4f6b75e052ad624ff62cfc8b' && 
+                return model.id == '1' && 
                     model.get('name') == 'pepito' && model.get('age') == 36;
             });
             should.exist(model);     
