@@ -3,10 +3,11 @@ import json
 from bson import json_util
 from pymongo.objectid import ObjectId
 
+from backmongo_conf import DATABASE, OID_PREFIX
+
+
 CONNECTION = pymongo.Connection()
-DATABASE = "backmongo"
 DB = CONNECTION[DATABASE]
-OID_PREFIX = 'oid_'
 
 def clean_id(id):
     if id.startswith(OID_PREFIX):
