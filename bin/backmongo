@@ -1,0 +1,6 @@
+#!/usr/bin/env python
+
+
+import flask_backmongo
+
+flask_backmongo.main()

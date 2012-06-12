@@ -24,8 +24,10 @@ def save(collection, _id=None):
 def init_app(app, url_prefix=''):
     app.register_blueprint(bp, url_prefix=url_prefix)
 
-
-if __name__ == '__main__':
+def main():
     app = Flask(__name__)
     init_app(app)
     app.run(debug=True)
+
+if __name__ == '__main__':
+    main()
