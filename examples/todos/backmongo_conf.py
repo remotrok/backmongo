@@ -1,3 +1,3 @@
 
-DATABASE = "backmongo"
-OID_PREFIX = 'oid_'
+DATABASE = "backmongo_todos"
+OID_PREFIX = 'todoid_'

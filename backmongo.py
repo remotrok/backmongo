@@ -3,7 +3,11 @@ import json
 from bson import json_util
 from pymongo.objectid import ObjectId
 
-from backmongo_conf import DATABASE, OID_PREFIX
+try:
+    from backmongo_conf import DATABASE, OID_PREFIX
+except ImportError:
+    DATABASE = 'backmongo'
+    OID_PREFIX = 'oid_'
 
 CONNECTION = pymongo.Connection()
 DB = CONNECTION[DATABASE]
