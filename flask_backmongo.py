@@ -25,7 +25,14 @@ def init_app(app, url_prefix=''):
     app.register_blueprint(bp, url_prefix=url_prefix)
 
 def main():
-    app = Flask(__name__)
+    import sys
+    import os
+    static_folder = os.path.join(os.getcwd(), 'static')
+    if len(sys.argv) > 1:
+        static_folder = os.path.abspath(sys.argv[1])
+    app = Flask('__main__',
+            static_url_path='/static',
+            static_folder=static_folder)
     init_app(app)
     app.run(debug=True)
 
