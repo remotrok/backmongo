@@ -3,4 +3,8 @@
 
 import flask_backmongo
 
+import os
+print os.getpid()
+
 flask_backmongo.main()
+

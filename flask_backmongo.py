@@ -39,7 +39,7 @@ def main():
             static_url_path='/static',
             static_folder=static_folder)
     init_app(app)
-    app.run(debug=True)
+    app.run(debug=False)
 
 if __name__ == '__main__':
     main()
