@@ -12,6 +12,24 @@ At the moment backmongo can be only used as a flask extension, but we plan to ad
 * flask
 * pymongo
 
+## Use
+
+### as a Flask extension
+
+    from flask import Flask
+    from flask.ext import backmongo
+
+    app = Flask(__name__)
+    backmongo.init_app(app)
+
+    if __name__ == "__main__":
+        app.run(debug=True)
+
+### From de command line
+
+    $ backmongo path/to/project/dir
+
+
 ## Examples
 There's an example in examples/todos/ (a slightly modified version of [this][0]) that illustrates how easy it's to use backmongo from a backbone application.
 
