@@ -1,7 +1,6 @@
 #! /usr/bin/env python
 
 import pymongo
-from pymongo.objectid import ObjectId
 
 CONNECTION = pymongo.Connection()
 DATABASE = "backmongo"
