@@ -23,7 +23,7 @@ You could install all with
     from flask.ext import backmongo
 
     app = Flask(__name__)
-    backmongo.init_app(app)
+    backmongo.init_app(app, url_prefix='API')
 
     if __name__ == "__main__":
         app.run(debug=True)
