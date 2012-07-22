@@ -4,7 +4,7 @@ It's a simple REST interface for MongoDB written in Python that can be used stra
 It's an alpha version.
 We are using it to develop backbone apps without having to worry about the server side. We've coded what we've needed so far. In the future we plan to add more features, such as, authentication, user privileges, etc.
 
-At the moment backmongo can be only used as a flask extension, but we plan to add extensions from other frameworks.
+At the moment **backmongo** can be only used as a flask extension, but we plan to add extensions from other frameworks.
 
 
 ## Requirements
@@ -34,7 +34,7 @@ You could install all with
 
 
 ## Examples
-There's an example in examples/todos/ (a slightly modified version of [this][0]) that illustrates how easy it's to use backmongo from a backbone application.
+There's an example in **examples/todos/** (a slightly modified version of [this][0]) that illustrates how easy it's to use **backmongo** from a backbone application.
 
 ## Tests
 There are several integration tests coded in javascript using Mocha running on Node.
@@ -58,9 +58,9 @@ Then you have to type in the console
 
     $ make
 
-this starts a flask app that use backmongo, execute the javascript tests with mocha and stop the flask app.
+this starts a flask app that use **backmongo**, execute the javascript tests with mocha and stop the flask app.
 
-By default the tests are working in a data base called **backmongo**. If you need to change this create a file named **backmongo_conf.py** in the root folder, or in some place in your **PYTHONPATH**, and set the data base name in the variable **DATABASE**. You could see an configuration file example in **examples/todo/static/backmongo_conf.py**
+By default the tests are working in a data base called **backmongo**. If you need to change this create a file named **backmongo_conf.py** in the root folder, or in some place in your **PYTHONPATH**, and set the data base name in the variable **DATABASE**. You could see a configuration file example in **examples/todo/static/backmongo_conf.py**
 
 [0]: http://backbonejs.org/#examples-todos
 [1]: http://garajeando.blogspot.com.es/2012/04/using-mocha-to-test-backbone.html
