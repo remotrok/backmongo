@@ -9,8 +9,8 @@ var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 
 jQuery.support.cors = true;
 jQuery.ajaxSettings.xhr = function () {
-    return new XMLHttpRequest;
-}
+    return new XMLHttpRequest();
+};
 
 var BMModel = Backbone.Model.extend({
     idAttribute: "_id",
@@ -19,7 +19,7 @@ var BMModel = Backbone.Model.extend({
 
 var BMCollection = Backbone.Collection.extend({
     model: BMModel,
-    url: 'http://localhost:5000/collection_tests/'         
+    url: 'http://localhost:5000/collection_tests/'
 });
 
 
@@ -28,8 +28,8 @@ describe("BMCollection", function(){
 
     beforeEach(function(){
          bmcollection = new BMCollection();
-    });  
-        
+    });
+
     it("is defined", function(){
         bmcollection.should.not.equal(undefined);
     });
@@ -40,7 +40,7 @@ describe("BackMongo", function(){
 
     describe("read all", function(){
         var expected;
-   
+
         beforeEach(function(done){
             bmcollection.fetch({success: function(){
                 done();
@@ -108,7 +108,7 @@ describe("BackMongo", function(){
                 return model.get('name') == 'paco';
             });
             should.exist(model);
-            model.id.substr(0, 4).should.equal('oid_');     
+            model.id.substr(0, 4).should.equal('oid_');
         });
     });
 
@@ -134,7 +134,7 @@ describe("BackMongo", function(){
             var model = bmcollection.find(function(model){
                 return model.get('_id') == '2';
             });
-            should.not.exist(model);     
+            should.not.exist(model);
         });
     });
 
@@ -155,10 +155,10 @@ describe("BackMongo", function(){
 
         it("update the right one", function(){
             var model = bmcollection.find(function(model){
-                return model.id == '1' && 
+                return model.id == '1' &&
                     model.get('name') == 'pepito' && model.get('age') == 36;
             });
-            should.exist(model);     
+            should.exist(model);
         });
     });
 });
