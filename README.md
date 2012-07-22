@@ -62,6 +62,9 @@ this starts a flask app that use **backmongo**, execute the javascript tests wit
 
 By default the tests are working in a data base called **backmongo**. If you need to change this create a file named **backmongo_conf.py** in the root folder, or in some place in your **PYTHONPATH**, and set the data base name in the variable **DATABASE**. You could see a configuration file example in **examples/todo/static/backmongo_conf.py**
 
+## Todo
+* Prepare and submit BackMongo to the Python Package Index
+
 [0]: http://backbonejs.org/#examples-todos
 [1]: http://garajeando.blogspot.com.es/2012/04/using-mocha-to-test-backbone.html
 [2]: http://garajeando.blogspot.com.es/2012/06/avoiding-xmlhttprequest-problem-using.html
