@@ -1,6 +1,7 @@
 # BackMongo
 
 It's a simple REST interface for MongoDB written in Python that can be used straight away from a Backbone application.
+
 It's an alpha version. We are using **backmongo** to develop backbone apps without having to worry about the server side. We've coded just what we've needed so far. In the future we plan to add more features, such as, authentication, user privileges, etc.
 
 At the moment **backmongo** can be only used as a flask extension, but we plan to add extensions for other frameworks.
@@ -69,6 +70,4 @@ By default the tests are working in a data base called **backmongo**. If you nee
 [2]: http://garajeando.blogspot.com.es/2012/06/avoiding-xmlhttprequest-problem-using.html
 [3]: http://visionmedia.github.com/mocha/
 [4]: https://github.com/visionmedia/should.js
-
-
 
