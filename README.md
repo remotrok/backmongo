@@ -68,6 +68,6 @@ By default the tests are working in a data base called **backmongo**. If you nee
 [0]: http://backbonejs.org/#examples-todos
 [1]: http://garajeando.blogspot.com.es/2012/04/using-mocha-to-test-backbone.html
 [2]: http://garajeando.blogspot.com.es/2012/06/avoiding-xmlhttprequest-problem-using.html
-[3]: http://visionmedia.github.com/mocha/
+[3]: http://mochajs.org/
 [4]: https://github.com/visionmedia/should.js
 
